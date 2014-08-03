@@ -1,0 +1,4 @@
+ <google-map latitude="37.77493" longitude="-121.41942"  zoom="8">
+   <google-map-marker  ng-repeat="developer in developers | filter:hero" latitude="{{developer.latitude}}" longitude="{{developer.longitude}}"draggable="true" title="{{developer.name}}"></google-map-marker>
+     
+ </google-map>

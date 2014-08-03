@@ -1,0 +1,92 @@
+<link href="../polymer/polymer.html" rel="import">
+<link href="../paper-shadow/paper-shadow.html" rel="import">
+<link href="../paper-ripple/paper-ripple.html" rel="import">
+<link href="../paper-toggle-button/paper-toggle-button.html" rel="import">
+
+<polymer-element name="post-card">
+  <template>
+    <style>
+    :host {
+      display: block;
+      position: relative;
+      background-color: white;
+      padding: 20px;
+      width: 250px;
+      height: 120px;
+      margin: 20px;
+      font-size: 1rem;
+      font-weight: 300;      
+    }
+    .card-header {
+      margin-bottom: 10px;
+    }
+
+    :host paper-ripple{
+
+      color: yellow;
+    }
+
+    .card-header .toggle{
+      float: right;
+      position: relative;      
+      display: inline-block;
+    }
+      .card-header .info{
+      text-align: center;
+      width: 100%;
+      }
+    
+    .card-header .sub-info{
+      text-align: center;
+      width: 100%;
+      font-style: oblique;
+      color: #3c3c3c; 
+    }
+
+    polyfill-next-selector { content: '.card-header h2'; }
+    .card-header ::content h2 {
+      margin: 0;
+      font-size: 1.3rem;
+      font-weight: 300;
+      display:inline;
+    }
+    polyfill-next-selector { content: '.card-header img'; }
+    .card-header ::content img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin: 15px 15px 10px 15px;
+    }
+
+
+    </style>
+     <paper-shadow z="1"></paper-shadow>
+     <paper-ripple fit></paper-ripple>
+      <div class="card-header" layout>
+          <div class="toggle">
+            <paper-toggle-button id="toggle-button" on-change="{{toggle}}"></paper-toggle-button>
+          </div>
+          <div class="info" layout horizontal center>
+            <content select="img"></content>
+            <content select="h2"></content> 
+          </div>
+           <div class="sub-info" horizontal center>
+            <content select="p"></content>  
+          </div>
+      </div>
+     
+      
+  </template>
+  <script>
+  Polymer('post-card',{
+    toggle: function(event,detail,sender){
+       this.event();    
+    },
+    event: function() {
+      console.log("fire!");
+      this.fire('toggle',{msg: "{{toggle}}"});
+    }
+
+  });
+  </script>
+</polymer-element>

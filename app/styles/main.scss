@@ -1,0 +1,57 @@
+  html,body {
+    height: 100%;
+    margin: 0;
+    background-color: #E5E5E5;
+    font-family: 'RobotoDraft', sans-serif;
+}
+
+core-header-panel {  
+  height: 100%;
+   overflow: auto;
+  -webkit-overflow-scrolling: touch; 
+}
+
+core-toolbar {
+ background: #4527a0;
+ height: 80px;
+ color: white;
+}
+
+google-map {
+    display: block;
+    height: 400px;
+ }
+
+#card-container{
+ width: 70%;
+ margin: 0 auto;
+}
+
+post-card{
+  float:left;
+}
+
+#toolbar{
+  width: 100%;
+}
+
+#hero-searh {
+  display: block;
+  margin: 10px auto 10px auto;
+  text-align: center;
+  background: white;
+  width: 280px;
+  border-bottom: 1px solid #c3c3c3;    
+}
+
+#hero-searh paper-input{
+  vertical-align: middle;
+  width: 200px;
+}
+
+
+#hero-searh core-icon{
+   vertical-align: middle;
+   margin: 5px;
+   color:#3c3c3c;
+}
