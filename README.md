@@ -1,7 +1,7 @@
 angular-polymer
 ===============
 
-Angular and polymer working together, a ver simple example
+Angular and polymer working together, a very simple example
 
 
 ### Howto 
